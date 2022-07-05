@@ -42,7 +42,7 @@ python -m grpc_tools.protoc : The command which executes proto auto-code generat
 ```
 Example: 
 ```
-python -m grpc_tools.protoc : The command which executes proto auto-code generation
+python -m grpc_tools.protoc -I.\proto\ --python_out=./code/ --grpc_python_out=./code/ ./proto/hello.proto
 ```
 
 After the code generation following files will be generated:
@@ -53,7 +53,7 @@ After the code generation following files will be generated:
 
 - Implement the server & client (server.py & client.py)
 
-- Fire up server
+- Fire up the server
 ```
 python server.py
 ```
